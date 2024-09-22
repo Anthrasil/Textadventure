@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#background {
+    width: 100vw;
+    height: 100vh;
+}
+
+#monitor {
+    display: flex;
+    position: absolute;
+    left: 10vw;
+    top: 9vh;
+    width: 80vw;
+    height: 80vh;
+    background-color: rgb(78, 78, 255);
+    border-radius: 150px;
+    box-shadow: 1.5vw 3.5vh 25px black;
+    animation: wobble 2s infinite;
+    flex-direction: column;
+    align-items: center;
+}
+
+#monitor *:hover {
+    cursor: default;
+    transform: scale(1.2);
+    transition-duration: 0.75s;
+    color: rgb(27, 20, 20);
+}
+
+#monitor *:not(hover) {
+    transform: scale(1);
+    transition-duration: 0.75s;
+}
+
+#targets .link:hover {
+    cursor: pointer;
+    color: lightblue;
+}
+
+#monitor #targets:hover {
+    transform: scale(1);
+}
+
+#monitor .link {
+    color: rgb(111, 158, 245);
+}
+
+@keyframes wobble {
+    0% {
+        left: 10vw;
+        top: 9vh;
+        width: 80vw;
+        height: 80vh;
+    }
+
+    50% {
+        left: 9vw;
+        top: 8vh;
+        width: 82vw;
+        height: 82vh;
+    }
+
+    100% {
+        left: 10vw;
+        top: 9vh;
+        width: 80vw;
+        height: 80vh;
+    }
+}
+
+#backToStart {
+    position: absolute;
+    background-color: gray;
+}
+
+#backToStart:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
